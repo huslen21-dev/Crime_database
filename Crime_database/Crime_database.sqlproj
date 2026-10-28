@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="2.3.0" />
+  <PropertyGroup>
+    <Name>crime_database</Name>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql170DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+    <ProjectGuid>09c2a4fb-f071-4586-9714-ccfa3337ba20</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Build Remove="Commented Query\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Remove="Scripts\Import\ChicagoCrime_Import.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Security\" />
+    <Folder Include="dbo\StoredProcedures\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\UserDefinedTypes\" />
+    <Folder Include="dbo\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Import\ChicagoCrime_Import.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Commented Query\**" />
+  </ItemGroup>
+</Project>
